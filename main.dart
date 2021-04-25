@@ -2,7 +2,7 @@ import 'dart:io';
 
 /*Given an array arr[] of size N which contains 
 the marks of a student in N subjects, the task 
-is to calculate the CGPA and the CGPA 
+is to calculate the GPA and the GPA 
 percentage of the student. 
 
 Note: Consider all marks to be out of 100, for 
@@ -12,10 +12,10 @@ Asuumption: Total attainable unit per course is 10.
 
 This is just for assignment purposes. It’s not 
 the accurate reflection of the conventional 
-CGPA in Nigeria*/
+GPA in Nigeria*/
 
 void main() {
-  print('welcome to Flutter Track CGPA calculator');
+  print('welcome to Flutter Track GPA and GPA% calculator');
   print('.......................................');
   print('input the registerer name ');
   String registerer = stdin.readLineSync();
@@ -65,7 +65,7 @@ void main() {
   var units = 50;
   double GPA = sum / units;
   print('.......................................');
-  print(' $name Cumulative Grade Point Average : $GPA  ');
+  print(' $name Grade Point Average : $GPA  ');
 
   double percentageGPA = (GPA * 9.5);
   print('.......................................');
