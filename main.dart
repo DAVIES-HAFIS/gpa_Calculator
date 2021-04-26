@@ -15,7 +15,7 @@ the accurate reflection of the conventional
 GPA in Nigeria*/
 
 void main() {
-  print('welcome to Flutter Track GPA and GPA% calculator');
+  print('Welcome to Flutter Track GPA and GPA% calculator');
   print('.......................................');
   print('input the registerer name ');
   String registerer = stdin.readLineSync();
@@ -58,12 +58,13 @@ void main() {
   subjectScore['$Subject3'] = s3;
   subjectScore['$Subject4'] = s4;
   subjectScore['$Subject5'] = s5;
-  print('.......................................');
-  print(subjectScore);
-  var sum = s1 + s2 + s3 + s4 + s5;
-  //GPA = subjectScore summation/ total attainable units
-  var units = 50;
-  double GPA = sum / units;
+  subjectScore.forEach((k, v) => print('${k}: ${v}'));
+
+  int totalScore;
+  subjectScore.forEach((k, v) => totalScore += v);
+
+  var units = 10;
+  double GPA = totalScore / (subjectScore.length * units);
   print('.......................................');
   print(' $name Grade Point Average : $GPA  ');
 
